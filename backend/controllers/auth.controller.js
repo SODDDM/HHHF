@@ -21,9 +21,7 @@ export const signup = async (req, res) => {
     }
 
     if (password.length < 6) {
-      return res
-        .status(400)
-        .json({ error: "Password must be at least 6 characters long" });
+      return res.status(400).json({ error: "密码必须大于6位数" });
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -69,7 +67,7 @@ export const login = async (req, res) => {
     );
 
     if (!user || !isPasswordCorrect) {
-      return res.status(400).json({ error: "Invalid username or password" });
+      return res.status(400).json({ error: "账号或者密码无效" });
     }
 
     generateTokenAndSetCookie(user._id, res);
