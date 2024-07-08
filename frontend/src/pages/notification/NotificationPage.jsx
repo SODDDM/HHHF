@@ -61,7 +61,7 @@ const NotificationPage = () => {
               className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a onClick={deleteNotifications}>Delete all notifications</a>
+                <a onClick={deleteNotifications}>删除所有通知</a>
               </li>
             </ul>
           </div>
@@ -72,7 +72,7 @@ const NotificationPage = () => {
           </div>
         )}
         {notifications?.length === 0 && (
-          <div className="text-center p-4 font-bold">No notifications 🤔</div>
+          <div className="text-center p-4 font-bold">没有任何通知哦 🤔</div>
         )}
         {notifications?.map((notification) => (
           <div className="border-b border-gray-700" key={notification._id}>

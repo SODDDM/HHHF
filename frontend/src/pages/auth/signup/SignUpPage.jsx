@@ -78,7 +78,7 @@ const SignUpPage = () => {
             <input
               type="email"
               className="grow"
-              placeholder="Email"
+              placeholder="邮箱"
               name="email"
               onChange={handleInputChange}
               value={formData.email}
@@ -90,7 +90,7 @@ const SignUpPage = () => {
               <input
                 type="text"
                 className="grow "
-                placeholder="Username"
+                placeholder="用户名"
                 name="username"
                 onChange={handleInputChange}
                 value={formData.username}
@@ -101,7 +101,7 @@ const SignUpPage = () => {
               <input
                 type="text"
                 className="grow"
-                placeholder="Full Name"
+                placeholder="全名"
                 name="fullName"
                 onChange={handleInputChange}
                 value={formData.fullName}
@@ -113,22 +113,22 @@ const SignUpPage = () => {
             <input
               type="password"
               className="grow"
-              placeholder="Password"
+              placeholder="密码"
               name="password"
               onChange={handleInputChange}
               value={formData.password}
             />
           </label>
           <button className="btn rounded-full btn-primary text-white">
-            {isPending ? "Loading..." : "Sign up"}
+            {isPending ? "正在加载..." : "注 册"}
           </button>
           {isError && <p className="text-red-500">{error.message}</p>}
         </form>
         <div className="flex flex-col lg:w-2/3 gap-2 mt-4">
-          <p className="text-white text-lg">Already have an account?</p>
+          <p className="text-white text-lg">准备好注册了吗?</p>
           <Link to="/login">
             <button className="btn rounded-full btn-primary text-white btn-outline w-full">
-              Sign in
+              登 录
             </button>
           </Link>
         </div>
